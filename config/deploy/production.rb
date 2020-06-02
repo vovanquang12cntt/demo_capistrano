@@ -11,7 +11,7 @@ set :stage, :production
 set :rails_env, :production
 set :deploy_to, "~/cap_app"
 set :branch, :master
-server "172.17.0.2", user: "deploy", roles: %w(web app db)
+server "172.17.0.3", user: "deploy", roles: %w(web app db)
 
 # role-based syntax
 # ==================
