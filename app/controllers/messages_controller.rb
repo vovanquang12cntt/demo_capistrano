@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.create message_params
+    @message = current_user.messages.create message_params
     if @message.save
       ActionCable.server.broadcast "room_channel", content: @message.content, user: current_user
     else
