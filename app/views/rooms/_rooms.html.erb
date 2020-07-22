@@ -1,0 +1,16 @@
+<% if @rooms %>
+  <div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+      <% @rooms.each do |room| %>
+        <li class="list-group-item"><%= link_to room.name, room_path(room) %></li>
+      <% end %>
+    </ul>
+  </div>
+<% else %>
+  <div class="text-muted">
+    The are no rooms
+  </div>
+<% end%>
+<div class="text-muted">
+  <%= link_to "Create room", new_room_path %>
+</div>

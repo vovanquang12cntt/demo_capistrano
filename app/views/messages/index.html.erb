@@ -9,7 +9,13 @@
 
 <div class="msg">
   <% @messages.each do |msg| %>
-    <p><%= msg.content %></p>
+    <% class_name = msg.user == current_user ? 'p-me' : 'p-other' %>
+    <p class="<%= class_name %>">
+      <% if msg.user != current_user %>
+        <span class="<%= class_name %>"><%= msg.user.name %></span>
+      <% end %>
+      <span><%= msg.content %></span>
+    </p>
   <% end %>
 </div>
 

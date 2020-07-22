@@ -10,7 +10,7 @@ class MessagesController < ApplicationController
   def create
     @message = current_user.messages.create message_params
     if @message.save
-      ActionCable.server.broadcast "room_channel", content: @message.content, user: current_user
+      ActionCable.server.broadcast "room_channel", message: @message, current_user_id: current_user.id
     else
 
     end
