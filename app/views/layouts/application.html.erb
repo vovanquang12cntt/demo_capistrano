@@ -9,7 +9,20 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <style>
+    a:hover{
+      background-color: none;
+    }
+  </style>
+
   <body>
-    <%= yield %>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <%= render partial: "shared/nav" %>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

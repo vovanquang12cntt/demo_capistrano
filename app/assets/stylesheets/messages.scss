@@ -1,0 +1,26 @@
+// Place all the styles related to the messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+
+.msg {
+  width: 400px;
+  background: aliceblue;
+  padding: 10px 5px;
+}
+
+.p-me {
+  text-align: right;
+}
+
+.p-me span {
+  color: #ff6060;
+  font-weight: bold;
+}
+
+span.p-other {
+  color: black;
+  font-weight: bold;
+}
+
